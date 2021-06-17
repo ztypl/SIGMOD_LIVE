@@ -1,2 +1,5 @@
 /deprecated/
 /data/cookies.json
+.idea/
+__pycache__/
+/data/info.json
