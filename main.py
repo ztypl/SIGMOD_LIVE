@@ -52,5 +52,12 @@ while True:
 
     exit(0)
 
+'''
+import requests
+resp = requests.post("http://sms-api.luosimao.com/v1/send.json",auth=("api", "key-79afd948d295f2be0a0869fd6507da4d"), data={"mobile": "18910149953","message": "hello,world【luosimao】"},timeout=3 , verify=False)
+print(resp.content)
 
+resp2 = requests.get("http://sms-api.luosimao.com/v1/status.json",auth=("api", "key-79afd948d295f2be0a0869fd6507da4d"),timeout=3 , verify=False)
+print(resp2.content)
+'''
 
