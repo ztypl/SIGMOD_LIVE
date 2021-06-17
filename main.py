@@ -40,11 +40,11 @@ while True:
         print("4. 开始推流")
         for line in push_livestream(youtube_link, push_link):
             line_str = line.decode()
-            if line_str.startswith('f'):
-                print(line_str, flush=True, end='')
-                # continue
+            if line_str.startswith('[hls'):
+            #     print(line_str.split('\r')[0], flush=True, end='\n')
+                continue
             # print(line, flush=True)
-            # print(line_str, flush=True, end='')
+            print(line_str, flush=True, end='')
     except subprocess.CalledProcessError:
         print("推流出现异常，正在重启脚本...")
         time.sleep(10)      # sleep for 10 secs

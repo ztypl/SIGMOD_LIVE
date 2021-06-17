@@ -95,6 +95,10 @@ def get_bilibili_live_info(browser):
         )
         print('已开始直播')
 
+
+
+
+
     rtmp_button = browser.find_element_by_xpath('//div[contains(@class, "rtmp")]/button')
     livecode_button = browser.find_element_by_xpath('//div[contains(@class, "live-code")]/button')
 
