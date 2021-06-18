@@ -25,8 +25,8 @@ COOKIES_FILE = "data/cookies.json"
 
 
 def read_info(filepath="data/info.json"):
-    file = open(filepath, 'r')
-    info = json.load(file, encoding='utf-8')
+    file = open(filepath, 'r', encoding='utf-8')
+    info = json.load(file)
     file.close()
     return info
 
@@ -95,16 +95,10 @@ def get_bilibili_live_info(browser):
         )
         print('已开始直播')
 
-
-
-
-
     rtmp_button = browser.find_element_by_xpath('//div[contains(@class, "rtmp")]/button')
     livecode_button = browser.find_element_by_xpath('//div[contains(@class, "live-code")]/button')
 
     return rtmp_button.get_attribute("data-clipboard-text") + livecode_button.get_attribute("data-clipboard-text")
-
-
 
 
 def auto_login():
