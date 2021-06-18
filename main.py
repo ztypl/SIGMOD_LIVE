@@ -39,7 +39,7 @@ while True:
     try:
         print("4. 开始推流")
         for line in push_livestream(youtube_link, push_link):
-            line_str = line.decode()
+            line_str = line.decode('gbk')
             if line_str.startswith('[hls'):
             #     print(line_str.split('\r')[0], flush=True, end='\n')
                 continue
