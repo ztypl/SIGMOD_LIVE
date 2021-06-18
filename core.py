@@ -115,6 +115,7 @@ def auto_login():
     for cookie in json_cookie:
         if "expiry" in cookie:
             cookie["expiry"] = int(cookie["expiry"])
+        print(cookie)
         browser.add_cookie(cookie)
     browser.get(home_page_url)
     new_cookies = browser.get_cookies()
