@@ -115,7 +115,7 @@ def auto_login():
     for cookie in json_cookie:
         if "expiry" in cookie:
             cookie["expiry"] = int(cookie["expiry"])
-        print(cookie)
+        # print(cookie)
         if cookie['domain'] != 'passport.bilibili.com':
             browser.add_cookie(cookie)
     browser.get(home_page_url)
