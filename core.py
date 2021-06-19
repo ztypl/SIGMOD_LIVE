@@ -88,7 +88,7 @@ def get_bilibili_live_info(browser):
         category_submit_button.click()
         title = browser.find_element_by_xpath('//input[@class="link-input title-input"]')
         title.clear()
-        title.send_keys("SIGMOD/POD 2021")
+        title.send_keys("SIGMOD/PODS 2021")
         live_status_button.click()
         WebDriverWait(browser, 5).until(
             EC.text_to_be_present_in_element((By.XPATH, '//button[@class="btn live-btn"]'), "关闭直播")
