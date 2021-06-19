@@ -3,6 +3,7 @@
 # date:   2021/6/17
 
 import time
+import requests
 from core import *
 # import zhenzismsclient as smsclient
 
