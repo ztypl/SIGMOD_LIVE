@@ -60,7 +60,7 @@ while True:
         youtube_link = get_youtube_live_info(youtube_webpage)
         if not youtube_link:
             send(info['room_id'], "无法获取到直播流，请检查代理后重试")
-    catch Exception:
+    except Exception:
         send(info['room_id'], '未知错误')
     try:
         print("4. 开始推流")
