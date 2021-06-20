@@ -18,8 +18,6 @@ mids = [
 
 headers = {'cookie': 'a'}
 
-info = read_info("data/info.json")
-
 retry = [0]
 
 while True:
