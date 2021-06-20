@@ -8,6 +8,7 @@ import subprocess
 from urllib import request as urlrequest
 import youtube_dl
 import ffmpeg
+import requests
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
@@ -22,6 +23,21 @@ from selenium.webdriver.support import expected_conditions as EC
 #
 # proxy_host = "http://127.0.0.1:7890"
 COOKIES_FILE = "data/cookies.json"
+
+
+def send(code, msg, retry=[0]):
+    print(msg)
+    resp = requests.post('http://sms-api.luosimao.com/v1/send.json', auth=('api', 'key-79afd948d295f2be0a0869fd6507da4d'),
+                         data={'mobile': '18910149953', 'message': f'同学你好，你报名参加的 {code} 活动将于一小时后开始，请前往 {msg} 参加活动【水木汇】'})
+    print(resp.text)
+    resp = requests.post('http://sms-api.luosimao.com/v1/send.json', auth=('api', 'key-79afd948d295f2be0a0869fd6507da4d'),
+                         data={'mobile': '13051575731', 'message': f'同学你好，你报名参加的 {code} 活动将于一小时后开始，请前往 {msg} 参加活动【水木汇】'})
+    print(resp.text)
+    retry[0] += 1
+    print('retry:', retry[0])
+    if retry[0] > 10:
+        exit(1)
+    # exit(1)
 
 
 def read_info(filepath="data/info.json"):
