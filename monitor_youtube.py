@@ -23,7 +23,7 @@ while True:
     try:
         for i, channel_id in enumerate(channel_ids):
             url = f"https://www.googleapis.com/youtube/v3/search?" \
-                f"part=id&channelId={channel_id}&eventType=live&type=video&key={info['google_api_key']}"
+                f"part=id&channelId={channel_id}&eventType=live&type=video&key={info['google_api_key']}&regionCode=CN"
             resp = requests.get(url)
             live_status = resp.json()['pageInfo']['totalResults']
             print(datetime.now())
