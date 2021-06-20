@@ -8,7 +8,6 @@ import requests
 from core import *
 
 channel_ids = [
-    'sdfds',
     'UC6HnOFC9ihT2uwwvetOJomw',
     'UCdGqN_CW8ye4x1kWd8I4MEQ',
     'UCwjDrhyDzo8BmtQz9zDZz3Q',
