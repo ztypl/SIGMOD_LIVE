@@ -30,7 +30,7 @@ while True:
             if live_status == 0:
                 send(i + 1, 'Youtube直播间中断', retry)
             time.sleep(10)
-    except Exception:
+    except Exception as e:
         send(i + 1, 'YouTube监测脚本未知错误', retry)
         print(resp.text)
         print(traceback.format_exc())

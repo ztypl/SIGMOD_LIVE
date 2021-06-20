@@ -57,7 +57,7 @@ while True:
         send(info['room_id'], '推流未知错误', retry)
         print(traceback.format_exc())
     time.sleep(10)
-    if retry > 10:
+    if retry[0] > 10:
         exit(1)
 
     # exit(0)
