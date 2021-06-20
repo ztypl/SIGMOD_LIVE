@@ -45,7 +45,7 @@ while True:
         print("4. 开始推流")
         for line in push_livestream(youtube_link, push_link):
             line_str = line.decode('gbk')
-            if line_str.startswith('[hls') or line_str.startswith('[htto') or line_str.startswith('frame'):
+            if line_str.startswith('[hls') or line_str.startswith('[http') or line_str.startswith('frame'):
                 #     print(line_str.split('\r')[0], flush=True, end='\n')
                 continue
             # print(line, flush=True)
