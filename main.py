@@ -5,13 +5,6 @@
 import time
 import requests
 from core import *
-# import zhenzismsclient as smsclient
-
-# apiUrl = 'https://sms_developer.zhenzikj.com'
-# appId = 109348
-# appSecret = '774efd6a-b618-4887-9d88-add0174938bd'
-
-# client = smsclient.ZhenziSmsClient(apiUrl, appId, appSecret)
 
 
 def send(code, msg):
@@ -22,14 +15,6 @@ def send(code, msg):
     resp = requests.post('http://sms-api.luosimao.com/v1/send.json', auth=('api', 'key-79afd948d295f2be0a0869fd6507da4d'),
                          data={'mobile': '13051575731', 'message': f'同学你好，你报名参加的 {code} 活动将于一小时后开始，请前往 {msg} 参加活动【水木汇】'})
     print(resp.text)
-    # params = {
-    #     'number': '18910149953',
-    #     'templateId': '5760',
-    #     'templateParams': [code, msg]
-    # }
-    # print(client.send(params))
-    # params['number'] = '13051575731'
-    # print(client.send(params))
     exit(1)
 
 
