@@ -31,6 +31,7 @@ while True:
 
         print("2. 打开bilibili直播间")
         push_link = get_bilibili_live_info(browser)
+        browser.quit()
 
         print("3. 获取YouTube直播流")
         youtube_link = get_youtube_live_info(youtube_webpage)
