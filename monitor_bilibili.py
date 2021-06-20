@@ -29,7 +29,6 @@ while True:
             if live_status == 0:
                 send(i + 1, 'b站直播间中断', retry)
             time.sleep(10)
-            raise KeyError
     except Exception as e:
         send(i + 1, 'b站监测脚本未知错误', retry)
         print(resp.text)
