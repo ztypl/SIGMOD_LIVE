@@ -35,7 +35,7 @@ def send(code, msg, retry=[0]):
     print(resp.text)
     retry[0] += 1
     print('retry:', retry[0])
-    if retry[0] > 10:
+    if retry[0] > 2:
         exit(1)
     # exit(1)
 

@@ -28,6 +28,7 @@ while True:
         youtube_webpage = get_youtube_live_webpage(info['channel_id'], info['google_api_key'])
         if not youtube_webpage:
             send(info['room_id'], "未查询到Youtube直播间", retry)
+            continue
 
         print("2. 打开bilibili直播间")
         push_link = get_bilibili_live_info(browser)
